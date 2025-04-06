@@ -69,7 +69,7 @@ int main() {
                 const sf::Vector2f pos = r->shape.getPosition();
                 for (int i = 0; i < 500; ++i) {
                     Particle p;
-                    p.shape = sf::CircleShape(2.5f);
+                    p.shape = sf::CircleShape(2.f);
                     p.shape.setFillColor(r->particleColor);
                     p.shape.setPosition(pos);
                     const float angle = std::uniform_real_distribution<float>(-180.f, 180.f)(engine) * 3.14f / 180.f;
