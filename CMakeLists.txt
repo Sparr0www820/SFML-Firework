@@ -12,6 +12,8 @@ FetchContent_Declare(SFML
         SYSTEM)
 FetchContent_MakeAvailable(SFML)
 
-add_executable(firework src/main.cpp)
+add_executable(firework src/main.cpp
+)
 target_compile_features(firework PRIVATE cxx_std_20)
-target_link_libraries(firework PRIVATE SFML::Graphics)
+target_include_directories(firework PRIVATE ${PROJECT_SOURCE_DIR}/include)
+target_link_libraries(firework PRIVATE SFML::Graphics SFML::Audio)
