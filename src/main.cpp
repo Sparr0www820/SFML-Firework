@@ -45,7 +45,7 @@ int main() {
         if (launchClock.getElapsedTime().asSeconds() >= 2.f) {
             launchClock.restart();
             Rocket r;
-            r.shape = sf::RectangleShape({ 4.f, 5.f });
+            r.shape = sf::RectangleShape({ 3.f, 10.f });
             r.shape.setFillColor(sf::Color::White);
             r.particleColor = sf::Color(
                 std::uniform_int_distribution<int>(150, 255)(engine),
