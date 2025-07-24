@@ -73,7 +73,7 @@ int main() {
                     p.shape.setFillColor(r->particleColor);
                     p.shape.setPosition(pos);
                     const float angle = std::uniform_real_distribution<float>(-180.f, 180.f)(engine) * 3.14f / 180.f;
-                    const float speed = std::uniform_real_distribution<float>(0.f, 250.f)(engine);
+                    const float speed = std::uniform_real_distribution<float>(0.f, 400.f)(engine);
 
                     p.velocity = sf::Vector2f({ std::cos(angle) * speed, std::sin(angle) * speed });
                     p.lifetime = std::uniform_real_distribution<float>(1.f, 2.5f)(engine);
@@ -96,7 +96,7 @@ int main() {
             //     static_cast<std::uint8_t>(g * life),
             //     static_cast<std::uint8_t>(b * life)
             // });
-            p->velocity = sf::Vector2f({ p->velocity.x * .99f, p->velocity.y * .99f });
+            p->velocity = sf::Vector2f({ p->velocity.x * .97f, p->velocity.y * .97f });
             if (p->lifetime <= 0.f) {
                 p = particles.erase(p);
             } else {
